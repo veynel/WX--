@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/schadule/schadule",
+    "pages/function/function",
+    "pages/personal/personal"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "科大",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#000",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "text": "课表",
+        "pagePath": "pages/schadule/schadule",
+        "iconPath": "images/calendar.png",
+        "selectedIconPath": "images/calendar_h.png"
+      },
+      {
+        "text": "功能",
+        "pagePath": "pages/function/function",
+        "iconPath": "images/ViewGallery.png",
+        "selectedIconPath": "images/ViewGallery_h.png"
+      },
+      {
+        "text": "个人中心",
+        "pagePath": "pages/personal/personal",
+        "iconPath": "images/account.png",
+        "selectedIconPath": "images/account_h.png"
+      }
+    ]
+  }
+}
