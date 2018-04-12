@@ -1,0 +1,30 @@
+<!--pages/schadule/schadule.wxml-->
+
+<view class='top' bindtap='bindHiddenChange'>第{{}}周</view>
+<scroll-view scroll-x class="swiper" wx:if="{{hidden}}">
+    <view class='swiperItem' wx:for="{{week}}">{{item}}</view>
+</scroll-view>
+<scroll-view>
+    <view class="table">
+        <view class="tr">
+            <view class="th"></view>
+            <view class="th">周一</view>
+            <view class="th">周二</view>
+            <view class="th">周三</view>
+            <view class="th">周四</view>
+            <view class="th">周五</view>
+            <view class="th">周六</view>
+            <view class="th">周日</view>
+        </view>
+        <view class="tr" wx:for="{{[1,2,3,4,5,6,7,8,9,10]}}" wx:for-item="i">
+            <view class="td tableTime">{{i}}</view>
+            <view class="td">1</view>
+            <view class="td">1</view>
+            <view class="td">1</view>
+            <view class="td">1</view>
+            <view class="td">1</view>
+            <view class="td">1</view>
+            <view class="td">1</view>
+        </view>
+    </view>
+</scroll-view> 
