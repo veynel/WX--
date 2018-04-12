@@ -1,0 +1,49 @@
+/* pages/schadule/schadule.wxss */
+page {
+  font-size: 14px;
+  color: #333
+}
+.top {
+  font-size: 20px;
+  text-align: center;
+  height: 60rpx;
+}
+.swiper {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+  display: flex;
+  white-space: nowrap;
+}
+.swiperItem {
+  width: 150rpx;
+  text-align: center;
+  display: inline-block;
+}
+.table {
+  width: 100%;
+}
+.tr {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.th,.td {
+  text-align: center;
+  width:100%
+}
+.th {
+  border-bottom: 1px solid #dadada;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-weight: 400;
+}
+.td {
+  height: 120rpx
+}
+.tableTime {
+  line-height: 120rpx;
+  border-bottom: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+}
