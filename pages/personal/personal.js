@@ -7,10 +7,17 @@ Page({
   data: {
     navlist:[
       {
+        id: "bdxh",
+        message: "绑定学号",
+        url: "../../images/set.png"
+      },
+      {
+        id: "wdxq",
         message: "我的学期",
         url: "../../images/set.png"
       },
       {
+        id: "wtfk",
         message: "问题反馈",
         url: "../../images/set.png"
       }
@@ -28,6 +35,16 @@ Page({
           userInfo: res.userInfo
         })
       }
+    })
+  },
+
+  navigateT: function (e) {
+    var url = "";
+    if(e.currentTarget.id == "bdxh") {
+      url = "../boundStudent/boundStudent"
+    }
+    wx.navigateTo({
+      url: url,
     })
   },
 
