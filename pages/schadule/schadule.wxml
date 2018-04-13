@@ -1,0 +1,26 @@
+<!--pages/schadule/schadule.wxml-->
+
+<view class='top' bindtap='bindHiddenChange'>第{{}}周</view>
+<scroll-view scroll-x class="swiper" wx:if="{{hidden}}">
+    <view class='swiperItem' wx:for="{{week}}">{{item}}</view>
+</scroll-view>
+    <view class='time'>
+        <view class='th'></view>
+        <view class='timeList' wx:for="{{[1,2,3,4,5,6,7,8,9,10]}}" wx:for-item="i">{{i}}</view>
+    </view>
+<scroll-view scroll-x scroll-y>
+    <view class="table">
+        <view class="tr">
+            <view class="th" wx:for='{{["一","二","三","四","五","六","七"]}}'>周{{item}}</view>
+        </view>
+        <view class="tr" wx:for="{{[1,2,3,4,5]}}" wx:for-item="i">
+            <view class="td" style='background-color:{{classInfo_e[schaduleArray[i*10-10]].color}}'>{{classInfo_e[schaduleArray[i*10-10]].kcm}}</view>
+            <view class="td" style='background-color:{{classInfo_e[schaduleArray[i*10-9]].color}}'>{{classInfo_e[schaduleArray[i*10-10+1]].kcm}}</view>
+            <view class="td" style='background-color:{{classInfo_e[schaduleArray[i*10-8]].color}}'>{{classInfo_e[schaduleArray[i*10-10+2]].kcm}}</view>
+            <view class="td" style='background-color:{{classInfo_e[schaduleArray[i*10-7]].color}}'>{{classInfo_e[schaduleArray[i*10-10+3]].kcm}}</view>
+            <view class="td" style='background-color:{{classInfo_e[schaduleArray[i*10-6]].color}}'>{{classInfo_e[schaduleArray[i*10-10+4]].kcm}}</view>
+            <view class="td" style='background-color:{{classInfo_e[schaduleArray[i*10-5]].color}}'>{{classInfo_e[schaduleArray[i*10-10+5]].kcm}}</view>
+            <view class="td" style='background-color:{{classInfo_e[schaduleArray[i*10-4]].color}}'>{{classInfo_e[schaduleArray[i*10-10+6]].kcm}}</view>
+        </view>
+    </view>
+</scroll-view> 
