@@ -120,7 +120,7 @@ Page({
         if(that.data.schaduleArray[i]) {
 
           //判断显示课程
-          if (that.data.classInfo_e[n].zIndex > that.data.classInfo_e[that.data.schaduleArray[i]].zIndex) {
+          if (that.data.classInfo_e[n].zIndex > that.data.classInfo_e[that.data.schaduleArray[i]].zIndex || that.data.classInfo_e[that.data.schaduleArray[i]].color == "grey") {
             
             //添加课程
             that.data.schaduleArray[i] = n;
