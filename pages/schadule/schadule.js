@@ -15,27 +15,27 @@ Page({
     _userInfo: [],//学生信息
     classInfo_c:[],//课表信息
     classInfo_e: [
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "" }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "" }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "" }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "" }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "" }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "" }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "" }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "" }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "" }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "" }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "" }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "" }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "" }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "" }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "" }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "" }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "" }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "" }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "" },
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "" }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "" }
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 },
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }
     ],//课表信息转换英文
     schaduleArray: []//课表
   },
@@ -74,6 +74,13 @@ Page({
           colorNumber--;
         }
       }
+
+      //当出现同一时间的多个课程时，选择显示哪个
+      for (var i = 0; i < app.globalData.zIndexArray.length; i++) {
+        if (m == app.globalData.zIndexArray[i]) {
+          that.data.classInfo_e[m].zIndex = 1;
+        }
+      }
       
       /* 未开始的课的颜色 */
       var str = (that.data.classInfo_c[m].周次 + "").replace("\(周\)", "").replace("\(周\)", "").replace("\(周\)", "");
@@ -109,8 +116,20 @@ Page({
         }
       } else {
 
-        //添加课程
-        that.data.schaduleArray[i] = n;
+        //是否有同时间的课
+        if(that.data.schaduleArray[i]) {
+
+          //判断显示课程
+          if (that.data.classInfo_e[n].zIndex > that.data.classInfo_e[that.data.schaduleArray[i]].zIndex) {
+            
+            //添加课程
+            that.data.schaduleArray[i] = n;
+          }
+        } else {
+          
+          //添加课程
+          that.data.schaduleArray[i] = n;
+        }
       }
 
       //使相连的两节同样的课程只显示一次
@@ -176,6 +195,13 @@ Page({
       week: this.data.thisWeek
     })
     this.changeSchadule();
+  },
+
+  /** 
+   *
+   */
+  showClassInfo: function (e) {
+    console.log(e.detail);
   },
 
   /**
