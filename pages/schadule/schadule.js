@@ -11,7 +11,7 @@ Page({
     colorArrays: ["#85B8CF", "#90C652", "#D8AA5A", "#FC9F9D", "#0A9A84", "#61BC69", "#12AEF3", "#E29AAD","#FF0000","#618888","#0000FF"],//课标颜色样式
     weekArrays: ["第1周", "第2周", "第3周", "第4周", "第5周", "第6周", "第7周", "第8周", "第9周", "第10周", "第11周", "第12周", "第13周", "第14周", "第15周", "第16周", "第17周", "第18周", "第19周","第20周"],
     week: 0,//显示第几周的课表
-    thisWeek: 9,//当前周
+    thisWeek: 10,//当前周
     _userInfo: [],//学生信息
     classInfo_c:[],//课表信息
     classInfo_e: [
@@ -79,7 +79,7 @@ Page({
       var str = (that.data.classInfo_c[m].周次 + "").replace("\(周\)", "").replace("\(周\)", "").replace("\(周\)", "");
       weekArray = str.split(",");
       var color = that.data.classInfo_e[m].color;
-      that.data.classInfo_e[m].color = "grey"
+      that.data.classInfo_e[m].color = "grey";
       for(var i = 0; i < weekArray.length; i++) {
         var weekArr = weekArray[i].split("-");
         if(weekArr.length == 1) {
@@ -163,7 +163,7 @@ Page({
    */
   bindPickerChange: function (e) {
     this.setData({
-      week: e.detail.value
+      week: parseInt(e.detail.value)
     })
     this.changeSchadule();
   },
