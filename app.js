@@ -34,7 +34,12 @@ App({
     })
   },
   globalData: {
-    userId:"152210409228",
-    Password:"syy19970813"
+    term: "2017-2018-2",
+    name: "",
+    studentId: "152210409233",//学号
+    password: "yh19970901",//密码
+    semesterIndex: "",
+    classInfo_c: [],//课表
+    zIndexArray: []//重叠课表情况优先显示的课表
   }
 })
