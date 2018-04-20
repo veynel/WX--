@@ -2,12 +2,16 @@
   "pages": [
     "pages/schadule/schadule",
     "pages/function/function",
-    "pages/personal/personal"
+    "pages/personal/personal",
+    "pages/boundStudent/boundStudent",
+    "pages/classInfo/classInfo",
+    "pages/semester/semester",
+    "pages/question/question"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "科大",
+    "navigationBarTitleText": "科大圈",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
