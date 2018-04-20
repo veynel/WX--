@@ -1,1 +1,27 @@
 /* pages/boundStudent/boundStudent.wxss */
+.input {
+  margin: 20rpx 0 40rpx 5rpx;
+}
+label {
+  display: inline-block;
+  font-size: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center
+}
+input {
+  display: inline-block;
+  width: 60%;
+  height: 40rpx;
+  margin-left: 4%;
+  border-radius: 10px;
+  border: 1px solid #000;
+  padding-left: 10rpx;
+}
+
+button {
+  margin-top: 20rpx;
+  width: 80%;
+  background-color: red;
+  color: white;
+}
