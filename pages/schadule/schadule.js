@@ -8,33 +8,33 @@ Page({
    * 页面的初始数据
    */
   data: {
-    colorArrays: ["#85B8CF", "#90C652", "#D8AA5A", "#FC9F9D", "#0A9A84", "#61BC69", "#12AEF3", "#E29AAD","#FF0000","#618888","#0000FF"],//课标颜色样式
-    weekArrays: ["第1周", "第2周", "第3周", "第4周", "第5周", "第6周", "第7周", "第8周", "第9周", "第10周", "第11周", "第12周", "第13周", "第14周", "第15周", "第16周", "第17周", "第18周", "第19周","第20周"],
+    colorArrays: ["#85B8CF", "#90C652", "#D8AA5A", "#FC9F9D", "#0A9A84", "#61BC69", "#12AEF3", "#E29AAD", "#FF0000", "#618888", "#0000FF"],//课标颜色样式
+    weekArrays: ["第1周", "第2周", "第3周", "第4周", "第5周", "第6周", "第7周", "第8周", "第9周", "第10周", "第11周", "第12周", "第13周", "第14周", "第15周", "第16周", "第17周", "第18周", "第19周", "第20周"],
     week: 0,//显示第几周的课表
-    thisWeek: 10,//当前周
+    thisWeek: 7,//当前周
     _userInfo: [],//学生信息
-    classInfo_c:[],//课表信息
+    classInfo_c: [],//课表信息
     classInfo_e: [
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
       { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 },
-      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }, 
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 },
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 },
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 },
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 },
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 },
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 },
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 },
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 },
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 },
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 },
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 },
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 },
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 },
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 },
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 },
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 },
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 },
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 },
+      { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 },
       { zc: "", js: "", xq: "", ls: "", jc: "", kcdm: "", kcm: "", color: "", zIndex: 0 }
     ],//课表信息转换英文
     schaduleArray: []//课表
@@ -57,7 +57,7 @@ Page({
     var weekArray = new Array();
 
     for (var m = 0; m < that.data.classInfo_c.length - 1; m++) {
-      
+
       that.data.classInfo_e[m].kcm = that.data.classInfo_c[m].课程名;
       that.data.classInfo_e[m].zc = that.data.classInfo_c[m].周次;
       that.data.classInfo_e[m].js = that.data.classInfo_c[m].教室;
@@ -81,20 +81,20 @@ Page({
           that.data.classInfo_e[m].zIndex = 1;
         }
       }
-      
+
       /* 未开始的课的颜色 */
       var str = (that.data.classInfo_c[m].周次 + "").replace("\(周\)", "").replace("\(周\)", "").replace("\(周\)", "");
       weekArray = str.split(",");
       var color = that.data.classInfo_e[m].color;
       that.data.classInfo_e[m].color = "grey";
-      for(var i = 0; i < weekArray.length; i++) {
+      for (var i = 0; i < weekArray.length; i++) {
         var weekArr = weekArray[i].split("-");
-        if(weekArr.length == 1) {
-          if(that.data.week + 1 == weekArr[0]) {
+        if (weekArr.length == 1) {
+          if (that.data.week + 1 == weekArr[0]) {
             that.data.classInfo_e[m].color = color;
           }
         } else {
-          if(that.data.week + 1 >= weekArr[0] && that.data.week + 1 <= weekArr[1]) {
+          if (that.data.week + 1 >= weekArr[0] && that.data.week + 1 <= weekArr[1]) {
             that.data.classInfo_e[m].color = color;
           }
         }
@@ -109,7 +109,7 @@ Page({
       //课程结束后删除该课程
       var str = (that.data.classInfo_c[n].周次 + "").replace("\(周\)", "").replace("\(周\)", "").replace("\(周\)", "");
       weekArray = str.split(",");
-      var weekArr = weekArray[weekArray.length-1].split("-");
+      var weekArr = weekArray[weekArray.length - 1].split("-");
       if (weekArr[weekArr.length - 1] < that.data.week + 1) {
         if (!that.data.schaduleArray[i]) {
           that.data.schaduleArray[i] = that.data.classInfo_e.length - 1;
@@ -117,16 +117,16 @@ Page({
       } else {
 
         //是否有同时间的课
-        if(that.data.schaduleArray[i]) {
+        if (that.data.schaduleArray[i]) {
 
           //判断显示课程
           if (that.data.classInfo_e[n].zIndex > that.data.classInfo_e[that.data.schaduleArray[i]].zIndex || that.data.classInfo_e[that.data.schaduleArray[i]].color == "grey") {
-            
+
             //添加课程
             that.data.schaduleArray[i] = n;
           }
         } else {
-          
+
           //添加课程
           that.data.schaduleArray[i] = n;
         }
@@ -152,33 +152,16 @@ Page({
     var schaduleArray = new Array();
     var that = this;
     that.setData({
-      week: that.data.thisWeek
+      week: that.data.thisWeek,
+      classInfo_c: app.globalData.classInfo_c
     });
-    if(!app.globalData.isShow) {
-      app.globalData.isShow = true;
-      wx.request({
-        url: "https://www.myangs.com/kedaquan/KebiaoServlet?check=yangs&xh="+app.globalData.studentId+"&pwd="+app.globalData.password+"&term=2017-2018-2",
-        data: {},
-        header: { 'content-type': 'application/json' },
-        method: "get",
-        success: function (res) {
-          console.log(res.data.课表)
-          that.setData({
-            _userInfo: res.data,
-            classInfo_c: res.data.课表
-          });
 
-          //生成课表
-          that.changeSchadule();
-        },
-        fail: function (res) { },
-        complete: function (res) { },
-      });
-    }
+    //生成课表
+    that.changeSchadule();
   },
 
   /** 
-   *
+   *查看不同周的课表
    */
   bindPickerChange: function (e) {
     this.setData({
@@ -186,9 +169,9 @@ Page({
     })
     this.changeSchadule();
   },
-  
+
   /** 
-   *
+   *返回当前周
    */
   BackToThisWeek: function () {
     this.setData({
@@ -198,16 +181,45 @@ Page({
   },
 
   /** 
-   *
+   *点击课程，查看课程信息
    */
   showClassInfo: function (e) {
-    console.log(e.detail);
+    var that = this;
+    var classArray = new Array();//传递需要的课程
+    var a = 0;
+
+    for (var n = 0; n < that.data.classInfo_c.length - 1; n++) {
+
+      //以课程的节次和星期组成二维数组储存对应课表的位置
+      var i = parseInt((that.data.classInfo_c[n].节次 - 1) + "" + (that.data.classInfo_c[n].星期 - 1));
+
+      //将星期和节次都对应得课程存储
+      if (i == e.currentTarget.dataset.index) {
+        classArray[a] = { idx: "", classInfo: [] };
+        classArray[a].idx = n;
+        classArray[a].classInfo.push(that.data.classInfo_e[n]);
+        for (var m = 0; m < that.data.classInfo_c.length - 1; m++) {
+          if (m != n && that.data.classInfo_e[n].kcdm == that.data.classInfo_e[m].kcdm) {
+            classArray[a].classInfo.push(that.data.classInfo_e[m]);
+          }
+        }
+      }
+    }
+
+    if (classArray.length) {
+
+      //以字符串的形式传递课程对象
+      let str = JSON.stringify(classArray);
+      wx.navigateTo({
+        url: '../classInfo/classInfo?classArray=' + str,
+      })
+    }
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+
   }
 })
