@@ -1,2 +1,15 @@
 <!--pages/boundStudent/boundStudent.wxml-->
-<text>pages/boundStudent/boundStudent.wxml</text>
+<view wx:if="{{student.name}}">
+    <view>{{student.name}}</view>
+    <button bindtap='logOut'>登出</button>
+</view>
+<view wx:else>
+    <view class='input'>
+        <label>学号：</label>
+        <input type='text' focus='true' confirm-type='next' bindinput='bindIdInput'></input>
+    </view>
+    <view class='input'>
+        <label>密码：</label><input type='password' bindinput='bindPasswordInput'></input>
+        <button bindtap='logIn'>登入</button>
+    </view>
+</view>
