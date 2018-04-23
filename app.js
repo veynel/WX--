@@ -34,12 +34,11 @@ App({
     })
   },
   globalData: {
-    isShow: false,
-    term: "2017-2018-2",
-    name: "",
+    isShow: false,//是否重新加载
+    term: "2017-2018-2",//学期
+    name: "",//姓名
     studentId: "152210409229",//学号
     password: "a1140145103",//密码
-    semesterIndex: "",
     classInfo_c: [],//课表
     zIndexArray: []//重叠课表情况优先显示的课表
   }
