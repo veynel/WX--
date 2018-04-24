@@ -1,2 +1,5 @@
 <!--pages/function/function.wxml-->
-<text>pages/function/function.wxml</text>
+<view wx:for="{{functionArray}}" class='button' data-index='{{index}}' bindtap='bindFunction'>
+    <image src='{{item.url}}'></image>
+    <view>{{item.name}}</view>
+</view>
