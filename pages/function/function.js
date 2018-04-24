@@ -5,14 +5,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    functionArray:[
+      {
+        url: "",
+        name: "成绩查询"
+      },
+      {
+        url: "",
+        name: ""
+      }
+    ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    
   },
 
   /**
@@ -51,10 +60,29 @@ Page({
   },
 
   /**
-   * 页面上拉触底事件的处理函数
+   * 各功能点击事件
    */
-  onReachBottom: function () {
-  
+  score: function() {
+    wx.request({
+      url: "https://www.myangs.com/kedaquan/ScoreServlet?check=yangs&xh=152210409228&pwd=syy19970813&term=2017-2018-1",
+      data: {},
+      header: { 'content-type': 'application/json' },
+      method: "get",
+      success: function (res) {
+        console.log(res);
+      }
+    })
+  }
+
+  /**
+   * 各功能点击事件
+   */
+  bindFunction: function (e) {
+
+    //第一个功能点击事件
+    if(e.curentTarget.dataset.index == 0) {
+
+    }
   },
 
   /**
