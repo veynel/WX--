@@ -1,12 +1,13 @@
 {
   "pages": [
+    "pages/boundStudent/boundStudent",
     "pages/schadule/schadule",
     "pages/function/function",
     "pages/personal/personal",
-    "pages/boundStudent/boundStudent",
     "pages/classInfo/classInfo",
     "pages/semester/semester",
-    "pages/question/question"
+    "pages/question/question",
+    "pages/score/score"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -33,7 +34,7 @@
         "selectedIconPath": "images/ViewGallery_h.png"
       },
       {
-        "text": "个人中心",
+        "text": "个人",
         "pagePath": "pages/personal/personal",
         "iconPath": "images/account.png",
         "selectedIconPath": "images/account_h.png"
