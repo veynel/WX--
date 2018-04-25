@@ -1,15 +1,14 @@
 <!--pages/boundStudent/boundStudent.wxml-->
-<view wx:if="{{student.name}}">
-    <view>{{student.name}}</view>
-    <button bindtap='logOut'>登出</button>
+<view class='userinfo' wx:if="{{show}}">
+    <image src='{{userInfo.avatarUrl}}' class='userinfo-avatar'></image>
+    <text class='userinfo-nickname'>{{userInfo.nickName}}</text>
 </view>
-<view wx:else>
+<view wx:if="{{show}}">
     <view class='input'>
-        <label>学号：</label>
-        <input type='text' focus='true' confirm-type='next' bindinput='bindIdInput'></input>
+        <input type='text' focus='true' confirm-type='next' bindinput='bindIdInput' placeholder='学号'></input>
     </view>
-    <view class='input'>
-        <label>密码：</label><input type='password' bindinput='bindPasswordInput'></input>
-        <button bindtap='logIn'>登入</button>
+    <view>
+        <input type='password' bindinput='bindPasswordInput' placeholder='密码'></input>
     </view>
+    <button bindtap='logIn'>登 入</button>
 </view>
