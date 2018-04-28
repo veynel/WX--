@@ -2,12 +2,12 @@
 
 <view class='userinfo'>
     <image src='{{userInfo.avatarUrl}}' class='userinfo-avatar'></image>
-    <text class='userinfo-nickname'>{{userInfo.nickName}}</text>
+    <text class='userinfo-nickname'>{{userName}}</text>
 </view>
 <view class='nav'>
     <view bindtap='' class='navItem' wx:for="{{navlist}}" bindtap='navigateT' id='{{item.id}}'>
         <image src='{{item.url}}' class='navIcon'></image>
-        <text class='itemMes'>{{item.message}}</text>
+        <text class='navMes'>{{item.message}}</text>
         <image src='../../images/more.png' class='moreIcon'></image>
     </view>
 </view>
