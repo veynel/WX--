@@ -1,4 +1,5 @@
 // pages/personal/personal.js
+var app = getApp();
 Page({
 
   /**
@@ -6,11 +7,6 @@ Page({
    */
   data: {
     navlist:[
-      {
-        id: "bdxh",
-        message: "绑定学号",
-        url: "../../images/set.png"
-      },
       {
         id: "wdxq",
         message: "我的学期",
@@ -20,8 +16,14 @@ Page({
         id: "wtfk",
         message: "问题反馈",
         url: "../../images/set.png"
+      },
+      {
+        id: "tczh",
+        message: "退出账号",
+        url: "../../images/set.png"
       }
-    ]
+    ],
+    userName: ""
   },
 
   /**
@@ -32,7 +34,8 @@ Page({
     wx.getUserInfo({
       success:function(res) {
         that.setData({
-          userInfo: res.userInfo
+          userInfo: res.userInfo,
+          userName: app.globalData.name
         })
       }
     })
@@ -40,12 +43,28 @@ Page({
 
   navigateT: function (e) {
     var url = "";
-    if(e.currentTarget.id == "bdxh") {
-      url = "../boundStudent/boundStudent"
+    if (e.currentTarget.id == "wdxq") {
+      url = "../semester/semester";
+      wx.navigateTo({
+        url: url,
+      })
     }
-    wx.navigateTo({
-      url: url,
-    })
+    if (e.currentTarget.id == "wtfk") {
+      url = "../question/question";
+      wx.navigateTo({
+        url: url,
+      })
+    }
+    if (e.currentTarget.id == "tczh") {
+      app.globalData.name = "";
+      app.globalData.studentId = "";
+      app.globalData.password = "";
+      wx.clearStorageSync();
+      url = "../boundStudent/boundStudent";
+      wx.reLaunch({
+        url: url,
+      })
+    }
   },
 
   /**
