@@ -1,0 +1,16 @@
+<!--pages/classInfo/classInfo.wxml-->
+<view wx:for="{{classInfoArray.length}}" wx:for-item="i" class='classList'>
+        <view bindtap='bindChangeZIndex' data-index='{{index}}' wx:if="{{classInfoArray[i].select == 0}}" class="notshow">未显示</view>
+        <view wx:else class='show'>已显示</view>
+        <view class='kcm'>{{classInfoArray[i].classInfo[0].kcm}}</view>
+        <view class='kcdm'>{{classInfoArray[i].classInfo[0].kcdm}}</view>
+        <view class='ls dimgrey'>教师： {{classInfoArray[i].classInfo[0].ls}}</view>
+        <view class='time' wx:for="{{classInfoArray[i].classInfo.length}}" wx:for-item="j">
+            <view class='dimgrey'>上课时间 {{j+1}}</view>
+            <image src='../../images/时间.png' class='icon'></image>
+            <view class='zc'>{{classInfoArray[i].classInfo[j].zc}}</view>
+            <view class='jc'>每周周{{classInfoArray[i].classInfo[j].xq}}第{{classInfoArray[i].classInfo[j].jc}}大节</view><text>\n</text>
+            <image src='../../images/楼房.png' class='icon'></image>
+            <view class='js'>{{classInfoArray[i].classInfo[j].js}}</view>
+        </view>
+</view>
