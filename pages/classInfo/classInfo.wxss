@@ -1,0 +1,83 @@
+/* pages/classInfo/classInfo.wxss */
+view {
+  box-sizing: border-box;
+  color: #666666;
+}
+
+.classList {
+  width: 100%;
+  margin-bottom: 10rpx;
+  position: relative;
+}
+
+.show {
+  position: absolute;
+  border: 1px solid #339933;
+  color: #339933;
+  font-size: 24rpx;
+  padding: 5rpx;
+  width: 85rpx;
+  right: 10rpx;
+}
+
+.notshow {
+  position: absolute;
+  border: 1px solid #999999;
+  color: #999999;
+  font-size: 24rpx;
+  padding: 5rpx;
+  width: 85rpx;
+  right: 10rpx;
+}
+
+.kcdm {
+  font-size: 30rpx;
+}
+
+.ls {
+  font-size: 30rpx;
+}
+
+.classList {
+  width: 100%;
+  border-bottom: 1rpx solid #eee;
+  padding: 60rpx 10rpx 40rpx 40rpx;
+}
+
+.time {
+  position: relative;
+  background-color: #eee;
+  width: 90%;
+  border-radius: 20rpx;
+  padding: 30rpx;
+  margin: 40rpx auto;
+  font-size: 30rpx;
+}
+
+.dimgrey {
+  color: #aaa;
+}
+
+.zc , .jc , .js {
+  font-size: 30rpx;
+  display: inline-block;
+  margin-top: 10rpx;
+}
+
+.zc {
+  margin-left: 20rpx;
+}
+
+.jc {
+  position: absolute;
+  right: 40rpx;
+}
+
+.js {
+  margin-left: 20rpx;
+}
+
+.icon {
+  width: 30rpx;
+  height: 30rpx;
+}
