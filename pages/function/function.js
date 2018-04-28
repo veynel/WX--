@@ -7,11 +7,35 @@ Page({
   data: {
     functionArray:[
       {
-        url: "",
+        url: "../../images/成绩管理.png",
         name: "成绩查询"
       },
       {
-        url: "",
+        url: "../../images/成绩管理.png",
+        name: "CET成绩"
+      },
+      {
+        url: "../../images/成绩管理.png",
+        name: "空教室查询"
+      },
+      {
+        url: "../../images/成绩管理.png",
+        name: "公交路线"
+      },
+      {
+        url: "../../images/成绩管理.png",
+        name: ""
+      },
+      {
+        url: "../../images/成绩管理.png",
+        name: ""
+      },
+      {
+        url: "../../images/成绩管理.png",
+        name: ""
+      },
+      {
+        url: "../../images/成绩管理.png",
         name: ""
       }
     ]
@@ -62,26 +86,13 @@ Page({
   /**
    * 各功能点击事件
    */
-  score: function() {
-    wx.request({
-      url: "https://www.myangs.com/kedaquan/ScoreServlet?check=yangs&xh=152210409228&pwd=syy19970813&term=2017-2018-1",
-      data: {},
-      header: { 'content-type': 'application/json' },
-      method: "get",
-      success: function (res) {
-        console.log(res);
-      }
-    })
-  }
-
-  /**
-   * 各功能点击事件
-   */
   bindFunction: function (e) {
 
-    //第一个功能点击事件
-    if(e.curentTarget.dataset.index == 0) {
-
+    //第一个功能点击事件:跳转到成绩查询页面
+    if(e.currentTarget.dataset.index == 0) {
+      wx.navigateTo({
+        url: '../score/score',
+      })
     }
   },
 
