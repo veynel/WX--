@@ -1,0 +1,6 @@
+<!--pages/semester/semester.wxml-->
+<view wx:for="{{semesterArray}}" class='semester'>
+    <view>{{item.name}}</view>
+    <view wx:if="{{itemIndex == item.index}}" class='show'>(当前学期)</view>
+    <view class='button' bindtap='changeSemester' data-index="{{index}}" wx:else class='button'>设为当前学期</view>
+</view>
