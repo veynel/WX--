@@ -1,0 +1,21 @@
+<!--pages/score/score.wxml-->
+<view class='border'></view>
+<view class='contain'>
+    <view>
+        <picker bindchange="pickerChangeTerm" value="{{index}}" range="{{termArray}}">
+            <view class="picker">
+                选择学期：{{termArray[index]}}
+            </view>
+        </picker>
+        <button class='button' bindtap='score'>确 认</button>
+    </view>
+    <view wx:if="{{classArray.length}}">
+        <view wx:for="{{classArray}}" class='classList'>
+            <view class='kcm'>{{item.kcm}}</view>
+            <view class='khfs'>{{item.khfs}}</view>
+            <view class='xf'>学分：{{item.xf}}</view>
+            <view class='fs'>分数：{{item.fs}}</view>
+        </view>
+        <view class='jd'>绩点：{{JD}}</view>
+    </view>
+</view>
