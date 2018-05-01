@@ -1,0 +1,32 @@
+/* pages/semester/semester.wxss */
+.semester {
+  box-sizing: border-box;
+  color: #666;
+  width: 100%;
+  height: 200rpx;
+  border-top: 1rpx solid #eee;
+  padding: 40rpx 20rpx 40rpx 40rpx;
+  position: relative
+}
+
+.semester view {
+  display: inline-block;
+}
+
+.show {
+  margin-left: 20rpx;
+}
+
+.button {
+  position: absolute;
+  top: 45rpx;
+  right: 5%;
+  font-size: 24rpx;
+  color: white;
+  background-color: #6c9;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  padding: 0 20rpx;
+  border-radius:  20rpx;
+}
