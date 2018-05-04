@@ -36,6 +36,7 @@ App({
   globalData: {
     isShow: false,//是否重新加载
     term: "2017-2018-2",//学期
+    date: "2-26",//开学日期
     name: "",//姓名
     studentId: "152210409229",//学号
     password: "a1140145103",//密码
