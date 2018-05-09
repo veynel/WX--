@@ -12,9 +12,9 @@
     <view wx:if="{{classArray.length}}">
         <view wx:for="{{classArray}}" class='classList'>
             <view class='kcm'>{{item.kcm}}</view>
-            <view class='khfs'>{{item.khfs}}</view>
-            <view class='xf'>学分：{{item.xf}}</view>
+            <view class='khfs' wx:if="{{item.khfs}}">{{item.khfs}}</view>
             <view class='fs'>分数：{{item.fs}}</view>
+            <view class='xf'>学分：{{item.xf}}</view>
         </view>
         <view class='jd'>绩点：{{JD}}</view>
     </view>
