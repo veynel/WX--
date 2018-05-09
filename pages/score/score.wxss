@@ -40,10 +40,10 @@ view {
   font-size: 28rpx;
   margin-top: 30rpx;
 }
-.xf {
+.fs {
   float: left;
 }
-.fs {
+.xf {
   float: right;
 }
 .jd {
