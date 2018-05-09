@@ -8,7 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    colorArrays: ["#85B8CF", "#90C652", "#D8AA5A", "#FC9F9D", "#0A9A84", "#61BC69", "#12AEF3", "#E29AAD", "#FF0000", "#618888", "#0000FF"],//课标颜色样式
+    colorArrays: ["#85B8CF", "#90C652", "#D8AA5A", "#FC9F9D", "#FF6666", "#61BC69", "#12AEF3", "#9999FF", "#FF7F00", "#DB7093", "#6699FF", "#FF3333", "#33CCCC"],//课标颜色样式
     weekArrays: ["第1周", "第2周", "第3周", "第4周", "第5周", "第6周", "第7周", "第8周", "第9周", "第10周", "第11周", "第12周", "第13周", "第14周", "第15周", "第16周", "第17周", "第18周", "第19周", "第20周"],
     week: 0,//显示第几周的课表
     thisWeek: 8,//当前周
@@ -52,9 +52,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function () {
-    console.log("1.onload");
+    var beginDate = new Date(app.globalData.date.replace(/-/g, "/"));
+    var nowDate = new Date();
+    var week = Math.floor(((nowDate - beginDate) / 86400000 + 1) / 7);
+    if(week < 0) {
+      week = 0;
+    }
     this.setData({
-      week: this.data.thisWeek,
+      thisWeek: week,
+      week: week,
     })
   },
 
@@ -86,8 +92,10 @@ Page({
         if (that.data.classInfo_e[m].kcm == that.data.classInfo_e[j].kcm) {
           that.data.classInfo_e[m].color = that.data.classInfo_e[j].color;
           colorNumber--;
+          break;
         }
       }
+      console.log(that.data.classInfo_e[m].kcm + "  " + that.data.classInfo_e[m].color)
 
       //当出现同一时间的多个课程时，选择显示哪个
       for (var i = 0; i < app.globalData.zIndexArray.length; i++) {
@@ -170,7 +178,6 @@ Page({
    */
   onShow: function () {
     var that = this;
-    console.log(app.globalData.isShow)
     if(app.globalData.isShow) {
       this.setData({
         classInfo_c: "",
